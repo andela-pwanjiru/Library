@@ -9,7 +9,6 @@ class LibraryView(View):
         if request.GET:
             form = BookForm(request.GET)
             if form.is_valid():
-                # import ipdb; ipdb.set_trace()
                 book_name = form.cleaned_data.get('title')
                 category_name = form.cleaned_data.get('category')
                 object_list = None
