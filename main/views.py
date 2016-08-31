@@ -12,6 +12,7 @@ class LibraryView(View):
                 # import ipdb; ipdb.set_trace()
                 book_name = form.cleaned_data.get('title')
                 category_name = form.cleaned_data.get('category')
+                object_list = None
                 if book_name:
                     object_list = Book.objects.filter(title__icontains=book_name)
                 if category_name:
